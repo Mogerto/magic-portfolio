@@ -24,20 +24,9 @@
     }
 }
 
-/* Extra small screens - make header even more compact */
-@media (max-width: 400px) {
-    .position {
-        padding: var(--static-space-4) !important;
-    }
-    
-    .hideOnMobile {
-        display: none !important;
-    }
-}
 
-.hideOnMobile {
-    display: flex;
-}
+
+
 
 .headerPadding {
     padding: var(--static-space-8);
@@ -51,13 +40,17 @@
     flex: 1;
 }
 
+.languageToggle {
+    display: flex;
+}
+
 /* Make navigation ultra-compact on very narrow screens */
 @media (max-width: 400px) {
     .headerPadding {
         padding: var(--static-space-4) !important;
     }
     
-    .hideOnMobile {
+    .languageToggle {
         display: none !important;
     }
     

@@ -98,17 +98,17 @@ export const Header = () => {
                 <Flex fillWidth justifyContent="center">
                     <Flex
                         background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                        padding="2"
+                        padding="4"
                         justifyContent="center">
                         <Flex
-                            gap="2"
+                            gap="4"
                             textVariant="body-default-s">
                             { routes['/'] && (
                                 <ToggleButton
                                     prefixIcon="home"
                                     href={`/${params?.locale}`}
                                     selected={pathname === "/"}>
-                                    <Flex paddingX="1" hide="s">{home.label}</Flex>
+                                    <Flex paddingX="2" hide="s">{home.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/about'] && (
@@ -116,7 +116,7 @@ export const Header = () => {
                                     prefixIcon="person"
                                     href={`/${params?.locale}/about`}
                                     selected={pathname === "/about"}>
-                                    <Flex paddingX="1" hide="s">{about.label}</Flex>
+                                    <Flex paddingX="2" hide="s">{about.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/work'] && (
@@ -124,26 +124,26 @@ export const Header = () => {
                                     prefixIcon="grid"
                                     href={`/${params?.locale}/work`}
                                     selected={pathname.startsWith('/work')}>
-                                    <Flex paddingX="1" hide="s">{work.label}</Flex>
+                                    <Flex paddingX="2" hide="s">{work.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/blog'] && (
-                                <Flex className={styles.hideOnMobile}>
+                                <Flex>
                                     <ToggleButton
                                         prefixIcon="book"
                                         href={`/${params?.locale}/blog`}
                                         selected={pathname.startsWith('/blog')}>
-                                        <Flex paddingX="1" hide="s">{blog.label}</Flex>
+                                        <Flex paddingX="2" hide="s">{blog.label}</Flex>
                                     </ToggleButton>
                                 </Flex>
                             )}
                             { routes['/gallery'] && (
-                                <Flex className={styles.hideOnMobile}>
+                                <Flex>
                                     <ToggleButton
                                         prefixIcon="gallery"
                                         href={`/${params?.locale}/gallery`}
                                         selected={pathname.startsWith('/gallery')}>
-                                        <Flex paddingX="1" hide="s">{gallery.label}</Flex>
+                                        <Flex paddingX="2" hide="s">{gallery.label}</Flex>
                                     </ToggleButton>
                                 </Flex>
                             )}
@@ -160,7 +160,8 @@ export const Header = () => {
                         <ThemeToggle />
                         
                         {routing.locales.length > 1 &&
-                            <Flex
+                            <Flex 
+                                className={styles.languageToggle}
                                 background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
                                 padding="2" gap="1"
                                 justifyContent="center">
