@@ -12,6 +12,7 @@
     top: var(--static-space-64);
 }
 
+/* Mobile styles */
 @media (--s) {
     .avatar {
         top: auto;
@@ -29,11 +30,20 @@
     .mainContent {
         padding-left: 0 !important;
         padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
+/* Desktop-only left padding to avoid overlap with TableOfContents */
 .mainContent {
-    padding-left: var(--static-space-xl);
+    padding-left: 0;
+}
+
+@media (min-width: 769px) {
+    .mainContent {
+        padding-left: var(--static-space-48);
+    }
 }
 
 .imageContainer {
