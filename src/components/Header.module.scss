@@ -45,7 +45,7 @@
 }
 
 /* Make navigation ultra-compact on very narrow screens */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .headerPadding {
         padding: var(--static-space-4) !important;
     }
