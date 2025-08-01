@@ -25,37 +25,35 @@
         "work": {
             "title": "Work Experience",
             "experiences": {
-                "FLY": {
+                "Freelance": {
                     "timeframe": "2022 - Present",
-                    "role": "Senior Design Engineer",
-                    "achievements": "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.;Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster."
-                },
-                "Creativ3": {
-                    "timeframe": "2018 - 2022",
-                    "role": "Lead Designer",
-                    "achievements": "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.;Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue."
+                    "role": "Full Stack Developer",
+                    "achievements": "Developing web applications using modern technologies like React, Next.js, Node.js and working with various databases and cloud services.;Focus on creating scalable, maintainable code and delivering quality solutions for clients from various industries."
                 }
             }
         },
         "studies": {
-            "title": "Studies",
+            "title": "Education and Learning",
             "institutions": {
-                "University of Jakarta": {
-                    "description": "Studied software engineering."
+                "Самообучение": {
+                    "description": "Continuous learning through online courses, documentation and practical projects."
                 },
-                "Build the Future": {
-                    "description": "Studied online marketing and personal branding."
+                "Open Source вклад": {
+                    "description": "Active participation in developer community, contributing to projects and knowledge sharing."
                 }
             }
         },
         "technical": {
             "title": "Technical skills",
             "skills": {
-                "Figma": {
-                    "description": "Able to prototype in Figma with Once UI with unnatural speed."
+                "Frontend разработка": {
+                    "description": "Proficient in React, Next.js, TypeScript and modern CSS frameworks for creating responsive web applications."
                 },
-                "Nextjs": {
-                    "description": "Building next gen apps with Next.js + Once UI + Supabase."
+                "Backend разработка": {
+                    "description": "Experience with Node.js, Python, databases and API development for full-stack solutions."
+                },
+                "DevOps и инструменты": {
+                    "description": "Familiar with Git, Docker, cloud platforms and various development tools for efficient workflows."
                 }
             }
         }

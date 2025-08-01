@@ -14,8 +14,8 @@
 
 @media (--s) {
     .avatar {
-
         top: auto;
+        position: static !important;
     }
 
     .textAlign {
@@ -24,5 +24,24 @@
 
     .blockAlign {
         align-self: center;
+    }
+
+    .mainContent {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.mainContent {
+    padding-left: var(--static-space-xl);
+}
+
+.imageContainer {
+    padding-left: var(--static-space-40);
+}
+
+@media (--s) {
+    .imageContainer {
+        padding-left: 0;
     }
 }

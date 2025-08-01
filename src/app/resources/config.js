@@ -1,11 +1,11 @@
 const baseURL = 'demo.magic-portfolio.com'
 
 // Enable localization
-const i18n = false;
+const i18n = true;
 
 // Manage localized content in the messages folder
 const i18nOptions = {
-    locales: ['en'],            // A list of all locales that are supported, e.g. ['en','id']
+    locales: ['en', 'ru'],      // A list of all locales that are supported, e.g. ['en','id']
     defaultLocale: 'en'         // Locale used by default and as a fallback
 }
 
@@ -40,7 +40,7 @@ const effects = {
 }
 
 const style = {
-    theme:       'dark',         // dark | light
+    theme:       'light',        // dark | light
     neutral:     'gray',         // sand | gray | slate
     brand:       'emerald',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan

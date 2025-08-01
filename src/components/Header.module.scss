@@ -23,3 +23,57 @@
         bottom: 0;
     }
 }
+
+/* Extra small screens - make header even more compact */
+@media (max-width: 400px) {
+    .position {
+        padding: var(--static-space-4) !important;
+    }
+    
+    .hideOnMobile {
+        display: none !important;
+    }
+}
+
+.hideOnMobile {
+    display: flex;
+}
+
+.headerPadding {
+    padding: var(--static-space-8);
+}
+
+.leftSection {
+    flex: 1;
+}
+
+.rightSection {
+    flex: 1;
+}
+
+/* Make navigation ultra-compact on very narrow screens */
+@media (max-width: 400px) {
+    .headerPadding {
+        padding: var(--static-space-4) !important;
+    }
+    
+    .hideOnMobile {
+        display: none !important;
+    }
+    
+    .leftSection {
+        flex: 0 0 auto !important;
+        min-width: 0;
+    }
+    
+    .rightSection {
+        flex: 0 0 auto !important;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .headerPadding {
+        padding: var(--static-space-2) !important;
+    }
+}

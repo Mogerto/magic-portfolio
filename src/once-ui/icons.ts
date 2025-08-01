@@ -20,7 +20,9 @@ import {
 	HiEnvelope,
 	HiCalendarDays,
 	HiClipboard,
-	HiArrowRight
+	HiArrowRight,
+	HiSun,
+	HiMoon
 } from "react-icons/hi2";
 
 import {
@@ -67,5 +69,7 @@ export const iconLibrary: Record<string, IconType> = {
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
 	clipboard: HiClipboard,
-	arrowUpRightFromSquare: HiArrowTopRightOnSquare
+	arrowUpRightFromSquare: HiArrowTopRightOnSquare,
+	sun: HiSun,
+	moon: HiMoon
 };

@@ -2,15 +2,14 @@ import { InlineCode } from "@/once-ui/components";
 
 const createI18nContent = (t) => {
     const person = {
-        firstName: 'Selene',
-        lastName:  'Yu',
+        firstName: 'Mogerto',
+        lastName:  'Developer',
         get name() {
             return `${this.firstName} ${this.lastName}`;
         },
         role:      t("person.role"),
         avatar:    '/images/avatar.jpg',
-        location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-        languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+        location:  'Europe/Moscow'        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     }
 
     const newsletter = {
@@ -25,22 +24,12 @@ const createI18nContent = (t) => {
         {
             name: 'GitHub',
             icon: 'github',
-            link: 'https://github.com/once-ui-system/nextjs-starter',
-        },
-        {
-            name: 'LinkedIn',
-            icon: 'linkedin',
-            link: 'https://www.linkedin.com/company/once-ui/',
-        },
-        {
-            name: 'X',
-            icon: 'x',
-            link: '',
+            link: 'https://github.com/Mogerto',
         },
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:example@gmail.com',
+            link: 'mailto:mogerto@example.com',
         },
     ]
 
@@ -77,10 +66,10 @@ const createI18nContent = (t) => {
             title: t("about.work.title"),
             experiences: [
                 {
-                    company: 'FLY',
-                    timeframe: t("about.work.experiences.FLY.timeframe"),
-                    role: t("about.work.experiences.FLY.role"),
-                    achievements: t("about.work.experiences.FLY.achievements").split(";"),
+                    company: 'Freelance',
+                    timeframe: t("about.work.experiences.Freelance.timeframe"),
+                    role: t("about.work.experiences.Freelance.role"),
+                    achievements: t("about.work.experiences.Freelance.achievements").split(";"),
                     images: [ // optional: leave the array empty if you don't want to display images
                         {
                             src: '/images/projects/project-01/cover-01.jpg',
@@ -89,13 +78,6 @@ const createI18nContent = (t) => {
                             height: 9
                         }
                     ]
-                },
-                {
-                    company: 'Creativ3',
-                    timeframe: t("about.work.experiences.Creativ3.timeframe"),
-                    role: t("about.work.experiences.Creativ3.role"),
-                    achievements: t("about.work.experiences.Creativ3.achievements").split(";"),
-                    images: [ ]
                 }
             ]
         },
@@ -104,12 +86,12 @@ const createI18nContent = (t) => {
             title: t("about.studies.title"),
             institutions: [
                 {
-                    name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    name: 'Самообучение',
+                    description: <>{t("about.studies.institutions.Самообучение.description")}</>,
                 },
                 {
-                    name: 'Build the Future',
-                    description: <>{t("about.studies.institutions.Build the Future.description")}</>,
+                    name: 'Open Source вклад',
+                    description: <>{t("about.studies.institutions.Open Source вклад.description")}</>,
                 }
             ]
         },
@@ -118,8 +100,8 @@ const createI18nContent = (t) => {
             title: t("about.technical.title"),
             skills: [
                 {
-                    title: 'Figma',
-                    description: <>{t("about.technical.skills.Figma.description")}</>,
+                    title: 'Frontend разработка',
+                    description: <>{t("about.technical.skills.Frontend разработка.description")}</>,
                     images: [
                         {
                             src: '/images/projects/project-01/cover-02.jpg',
@@ -136,8 +118,8 @@ const createI18nContent = (t) => {
                     ]
                 },
                 {
-                    title: 'Next.js',
-                    description: <>{t("about.technical.skills.Nextjs.description")}</>, // "." not accepted in next-intl namespace
+                    title: 'Backend разработка',
+                    description: <>{t("about.technical.skills.Backend разработка.description")}</>,
                     images: [
                         {
                             src: '/images/projects/project-01/cover-04.jpg',
@@ -146,6 +128,11 @@ const createI18nContent = (t) => {
                             height: 9
                         },
                     ]
+                },
+                {
+                    title: 'DevOps и инструменты',
+                    description: <>{t("about.technical.skills.DevOps и инструменты.description")}</>,
+                    images: []
                 }
             ]
         }

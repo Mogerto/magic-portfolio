@@ -68,3 +68,14 @@ a {
 ::-webkit-scrollbar-corner {
     background-color: var(--static-transparent);
 }
+
+/* MOBILE NAVIGATION OPTIMIZATIONS */
+@media (max-width: 400px) {
+    :root {
+        --mobile-hidden: none;
+    }
+}
+
+:root {
+    --mobile-hidden: flex;
+}

@@ -13,6 +13,7 @@ import { Locale, usePathname, useRouter } from '@/i18n/routing';
 import { renderContent } from "@/app/resources";
 import { useTranslations } from "next-intl";
 import { i18n } from "@/app/resources/config";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 type TimeDisplayProps = {
     timeZone: string;
@@ -78,13 +79,14 @@ export const Header = () => {
                 fillWidth minHeight="80" justifyContent="center">
             </Flex>
             <Flex style={{height: 'fit-content'}}
-                className={styles.position}
+                className={`${styles.position} ${styles.headerPadding}`}
                 as="header"
                 zIndex={9}
-                fillWidth padding="8"
+                fillWidth 
                 justifyContent="center">
                 <Flex
-                    paddingLeft="12" fillWidth
+                    paddingLeft="12" 
+                    className={styles.leftSection}
                     alignItems="center"
                     textVariant="body-default-s">
                     { display.location && (
@@ -96,17 +98,17 @@ export const Header = () => {
                 <Flex fillWidth justifyContent="center">
                     <Flex
                         background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                        padding="4"
+                        padding="2"
                         justifyContent="center">
                         <Flex
-                            gap="4"
+                            gap="2"
                             textVariant="body-default-s">
                             { routes['/'] && (
                                 <ToggleButton
                                     prefixIcon="home"
                                     href={`/${params?.locale}`}
                                     selected={pathname === "/"}>
-                                    <Flex paddingX="2" hide="s">{home.label}</Flex>
+                                    <Flex paddingX="1" hide="s">{home.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/about'] && (
@@ -114,7 +116,7 @@ export const Header = () => {
                                     prefixIcon="person"
                                     href={`/${params?.locale}/about`}
                                     selected={pathname === "/about"}>
-                                    <Flex paddingX="2" hide="s">{about.label}</Flex>
+                                    <Flex paddingX="1" hide="s">{about.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/work'] && (
@@ -122,38 +124,45 @@ export const Header = () => {
                                     prefixIcon="grid"
                                     href={`/${params?.locale}/work`}
                                     selected={pathname.startsWith('/work')}>
-                                    <Flex paddingX="2" hide="s">{work.label}</Flex>
+                                    <Flex paddingX="1" hide="s">{work.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/blog'] && (
-                                <ToggleButton
-                                    prefixIcon="book"
-                                    href={`/${params?.locale}/blog`}
-                                    selected={pathname.startsWith('/blog')}>
-                                    <Flex paddingX="2" hide="s">{blog.label}</Flex>
-                                </ToggleButton>
+                                <Flex className={styles.hideOnMobile}>
+                                    <ToggleButton
+                                        prefixIcon="book"
+                                        href={`/${params?.locale}/blog`}
+                                        selected={pathname.startsWith('/blog')}>
+                                        <Flex paddingX="1" hide="s">{blog.label}</Flex>
+                                    </ToggleButton>
+                                </Flex>
                             )}
                             { routes['/gallery'] && (
-                                <ToggleButton
-                                    prefixIcon="gallery"
-                                    href={`/${params?.locale}/gallery`}
-                                    selected={pathname.startsWith('/gallery')}>
-                                    <Flex paddingX="2" hide="s">{gallery.label}</Flex>
-                                </ToggleButton>
+                                <Flex className={styles.hideOnMobile}>
+                                    <ToggleButton
+                                        prefixIcon="gallery"
+                                        href={`/${params?.locale}/gallery`}
+                                        selected={pathname.startsWith('/gallery')}>
+                                        <Flex paddingX="1" hide="s">{gallery.label}</Flex>
+                                    </ToggleButton>
+                                </Flex>
                             )}
                         </Flex>
                     </Flex>
                 </Flex>
-                <Flex fillWidth justifyContent="flex-end" alignItems="center">
+                <Flex className={styles.rightSection} justifyContent="flex-end" alignItems="center">
                     <Flex
                         paddingRight="12"
                         justifyContent="flex-end" alignItems="center"
                         textVariant="body-default-s"
                         gap="20">
+                        {/* Theme Toggle */}
+                        <ThemeToggle />
+                        
                         {routing.locales.length > 1 &&
                             <Flex
                                 background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                                padding="4" gap="2"
+                                padding="2" gap="1"
                                 justifyContent="center">
                                 {i18n && routing.locales.map((locale, index) => (
                                     <ToggleButton

@@ -114,31 +114,12 @@ export default function About(
                         <Avatar
                             src={person.avatar}
                             size="xl"/>
-                        <Flex
-                            gap="8"
-                            alignItems="center">
-                            <Icon
-                                onBackground="accent-weak"
-                                name="globe"/>
-                            {person.location}
-                        </Flex>
-                        { person.languages.length > 0 && (
-                            <Flex
-                                wrap
-                                gap="8">
-                                {person.languages.map((language, index) => (
-                                    <Tag
-                                        key={index}
-                                        size="l">
-                                        {language}
-                                    </Tag>
-                                ))}
-                            </Flex>
-                        )}
+                        {/* Location display removed - already shown in header */}
+                        {/* Languages display removed - using header language switcher instead */}
                     </Flex>
                 )}
                 <Flex
-                    className={styles.blockAlign}
+                    className={`${styles.blockAlign} ${styles.mainContent}`}
                     fillWidth flex={9} maxWidth={40} direction="column">
                     <Flex
                         id={about.intro.title}
@@ -264,7 +245,8 @@ export default function About(
                                         </Flex>
                                         {experience.images.length > 0 && (
                                             <Flex
-                                                fillWidth paddingTop="m" paddingLeft="40"
+                                                fillWidth paddingTop="m" 
+                                                className={styles.imageContainer}
                                                 wrap>
                                                 {experience.images.map((image, index) => (
                                                     <Flex
